@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(254, 252, 247);
+}
+
+header {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    padding: 3px;
+    width: 75px;
+}
+
+nav {
+    padding: 0 15px 0 9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.5s, background-color 0.5s;
+}
+
+/* Chessboard styles */
+h1 {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    font-size: larger;
+    font-weight: bold;
+}
+
+#gameBoard {
+    width: 640px;
+    height: 640px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px auto;
+}
+
+.square {
+    height: 80px;
+    width: 80px;
+    position: relative;
+}
+
+.square svg {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    position: relative;
+    z-index: 9;
+}
+
+.beige {
+    background-color: rgba(223, 217, 200, 0.816);
+}
+
+.brown {
+    background-color: rgb(69, 97, 129);
+}
+
+.black {
+    fill: rgb(28, 28, 28);
+}
+
+.white {
+    fill: rgba(232, 227, 214, 0.826);
+}
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+}
+
+footer img {
+    width: 15px;
+}
