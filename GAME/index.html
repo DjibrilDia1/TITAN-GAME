@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-        </style>
+    </style>
     <title>Échec</title>
 </head>
 <body>
@@ -14,21 +14,25 @@
 
         <!-- Menu de navigation à droite -->
         <div class="gauche">
-            <img src="Logo.jpg" alt="logo">
 
-            <nav>
-                <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="#">Jouer</a></li>
-                    <li><a href="#">Aide</a></li>
-                </ul>
-            </nav>
+            <div id="logo">
+                <img src="x.jpg" alt="logo">
+            </div>
+            
+            <div id="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Jouer</a></li>
+                        <li><a href="#">Aide</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
         </div>
-        
 
         <!-- Section principale -->
         <div class="main-content">
-            
             <div id="gameBoard"></div>
         </div>
 
@@ -55,16 +59,15 @@
             </div>
         </aside>
 
-        
     </div>
 
     <script src="plateau.js"></script>
-    <script src="chronometre/script.js"></script>
 
     <footer>
         <section>
             <p class="C">chessGame<span>&copy;</span> 2024 Privacy policy</p> 
-        </section>
+        </section>    
     </footer>
+
 </body>
 </html>

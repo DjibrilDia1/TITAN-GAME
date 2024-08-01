@@ -3,7 +3,7 @@ body {
     padding: 0;
     width: 100%;
     font-family: "Roboto" , sans-serif;
-    background-color: rgb(232, 238, 238);
+    background-color: rgb(240, 243, 243);
 }
 
 .container {
@@ -13,6 +13,7 @@ body {
     padding: 10px;
     gap: 5px;
 }
+    
 /*******************************************************************/
 .info{
     background-color: rgb(254, 252, 247);
@@ -27,11 +28,11 @@ body {
 .sidebar {
     width: 20%;
     height: 200px;
-    background-color:rgb(232, 238, 238);
+    background-color:rgb(240, 243, 243);;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap:50px;
+    gap:70px;
     padding: 20px;
     text-align: center;
     border-right: 5px solid #b9c9d1;
@@ -67,18 +68,21 @@ body {
     font-size: 35px;
     margin-bottom: 10px;
 }
+
 .tim span{
-    font-family: "Dancing Script", cursive;
+    font-family: "Roboto", cursive;
     padding: 5px;
 
 }
+
 .controle{
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
+
 button{
-    background-color: #1d9c5e;
+    background-color: #6498b0;
     color: white;
     font-size: 15px;
     padding: 10px 20px;
@@ -88,10 +92,10 @@ button{
     letter-spacing: 1px;
     transition: 0.5s;
     cursor: pointer;
-    
 }
 button:hover{
     transform: scale(0.9);
+    background-color: #1d9c5e;
 }
 #player{
     color:#927d3d;
@@ -102,29 +106,24 @@ button:hover{
     font-weight: bold;
     margin-bottom: 20px;
 }
-/*************************************************************************/
 
+/*************************************************************************/
 .gauche {
-    
-    height:30vh;
+    height:50vh;
     width: 20%;
-    background-color: rgb(254, 252, 247);
-    margin-top: 130px;
+    background-color:rgb(240, 243, 243);;
+    margin-top: 100px;
     padding: 20px;
     display: flex;
     flex-direction: column;
+    gap: 50px;
     justify-content: center;
     text-align: center;
-    border: 2px solid #1f2428;
-    border-radius: 5px;
 }
 
-img {
-    display: inline;
-    max-width: 50px;;
-    margin-left:120px;
-    height: 50px;
-    
+img  {
+    max-width: 100px;
+    height: 100px;
 }
 
 ul {
@@ -135,9 +134,16 @@ ul {
 }
 
 li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
+    background-color:#6498b0;
+    color: white;
+    font-size: 15px;
+    margin: 0px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 31%; 
+    border: 0;
+    transition: 0.5s;
+    cursor: pointer;
     text-decoration: none;
 }
 
@@ -153,8 +159,6 @@ li a:hover {
     text-align: center;
 }
 
-
-
 .turnbar {
     font-size: larger;
     color:#000;
@@ -162,34 +166,6 @@ li a:hover {
     margin-bottom: 20px;
 }
 
-
-
-
-/*
-nav {
-    padding: 0 15px 0 9px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul {
-    display: flex;
-    gap: 20px;
-}
-
-nav ul li {
-    list-style: none;
-}
-
-nav ul a {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-    transition: color 0.5s, background-color 0.5s;
-}
-*/
-/* Chessboard styles */
 h1 {
     margin-bottom: 60px;
     display: flex;
