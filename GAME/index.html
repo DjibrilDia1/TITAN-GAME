@@ -4,36 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        </style>
     <title>Échec</title>
 </head>
 <body>
+    <div class="container">
 
-<header>
-    <img src="Logo.jpg" alt="logo">
-    <nav>
-        <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Jouer</a></li>
-            <li><a href="#">Aide</a></li>
-        </ul>
-    </nav>
-</header>
+        <!-- Menu de navigation à droite -->
+        <div class="gauche">
+            <img src="Logo.jpg" alt="logo">
 
-<!-- Contenu de mon plateau d'échecs -->
-<div id="gameBoard"></div>
+            <nav>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Jouer</a></li>
+                    <li><a href="#">Aide</a></li>
+                </ul>
+            </nav>
+        </div>
+        
 
-<!-- Affiche à qui est le tour -->
-<p class="turnbar">It is <span id="player"></span>'s turn.</p>
-<!-- Affiche les mouvements du jeu -->
-<p class="info-display" id="info-display"></p>
-<!-- Les messages d'erreur s'il y en a -->5
-<p class="err" id="err"></p>
+        <!-- Section principale -->
+        <div class="main-content">
+            
+            <div id="gameBoard"></div>
+        </div>
 
-<script src="plateau.js"></script>
+        <!-- Chronomètre à gauche -->
+        <aside class="sidebar">
+            <div class="timer">
+                <div class="tim">
+                    <span>0 h</span>:
+                    <span>0 min</span>:
+                    <span>0 s</span>:
+                    <span>0 ms</span>
+                </div>
+                <div class="controle">
+                    <button id="star" onclick="start()">start</button>
+                    <button id="stop" onclick="stop()">stop</button>
+                    <button id="reset" onclick="reset()">reset</button>
+                </div>
+            </div>
 
-<footer>
-    <h3>TECH TITANS <img src="images/footer.jpg" alt="c"> 2024</h3>
-</footer>
+            <div class="info">
+                <p id="info1">Info</p>
+                <p class="turnbar">C'est au tour des <span id="player"></span> de jouer.</p>
+                <p class="info-display" id="info-display">.....</p>
+            </div>
+        </aside>
 
+        
+    </div>
+
+    <script src="plateau.js"></script>
+    <script src="chronometre/script.js"></script>
+
+    <footer>
+        <section>
+            <p class="C">chessGame<span>&copy;</span> 2024 Privacy policy</p> 
+        </section>
+    </footer>
 </body>
 </html>

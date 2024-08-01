@@ -2,22 +2,170 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: rgb(254, 252, 247);
+    font-family: "Roboto" , sans-serif;
+    background-color: rgb(232, 238, 238);
 }
 
-header {
-    padding: 0;
+.container {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: center;
+    padding: 10px;
+    gap: 5px;
+}
+/*******************************************************************/
+.info{
+    background-color: rgb(254, 252, 247);
+    border: 2px solid #1f2428;
+    border-radius: 5px;
 }
 
-header img {
-    padding: 3px;
-    width: 75px;
+.turbar {
+    font-weight: lighter;
 }
 
+.sidebar {
+    width: 20%;
+    height: 200px;
+    background-color:rgb(232, 238, 238);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:50px;
+    padding: 20px;
+    text-align: center;
+    border-right: 5px solid #b9c9d1;
+    border-radius: 1px;
+    position: relative;
+    top: 130px;
+}
+
+#info1 {
+    text-decoration: underline  ;
+}
+
+#timer {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #6498b0;
+    border: 2px solid #1f2428;
+    background-color: white;
+    padding: 10px;
+    border-radius: 6px;
+    width: 400px;
+    text-align: center;
+}
+
+.tim{
+    margin: auto;
+    width: 100%;
+    border: 1px solid #999;
+    border-radius: 6px;
+    padding:5px 0;
+    text-align: center;
+    font-weight: 400;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.tim span{
+    font-family: "Dancing Script", cursive;
+    padding: 5px;
+
+}
+.controle{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+button{
+    background-color: #1d9c5e;
+    color: white;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 31%; 
+    border: 0;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    cursor: pointer;
+    
+}
+button:hover{
+    transform: scale(0.9);
+}
+#player{
+    color:#927d3d;
+}
+
+.info-display {
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+/*************************************************************************/
+
+.gauche {
+    
+    height:30vh;
+    width: 20%;
+    background-color: rgb(254, 252, 247);
+    margin-top: 130px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid #1f2428;
+    border-radius: 5px;
+}
+
+img {
+    display: inline;
+    max-width: 50px;;
+    margin-left:120px;
+    height: 50px;
+    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+
+/***********************************************************************/
+.main-content {
+    flex: 2;
+    text-align: center;
+}
+
+
+
+.turnbar {
+    font-size: larger;
+    color:#000;
+    font-weight:400;
+    margin-bottom: 20px;
+}
+
+
+
+
+/*
 nav {
     padding: 0 15px 0 9px;
     display: flex;
@@ -40,7 +188,7 @@ nav ul a {
     cursor: pointer;
     transition: color 0.5s, background-color 0.5s;
 }
-
+*/
 /* Chessboard styles */
 h1 {
     margin-bottom: 60px;
@@ -59,7 +207,9 @@ p {
     background-color: black;
     display: flex;
     flex-wrap: wrap;
-    margin: 5px auto;
+    margin: 5px;
+    margin-left:100px;
+    margin-right:50px;
 }
 
 .square {
@@ -68,6 +218,20 @@ p {
     position: relative;
 }
 
+.square svg {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    position: relative;
+    z-index: -9;
+}
+
+path {
+    position: relative;
+    z-index: -10;
+}
+
+/*
 .square .piece {
     width: 50px;
     height: 50px;
@@ -75,11 +239,11 @@ p {
     margin: 3px;
     position: relative;
     z-index: 9;
-}
+}*/
 
-.square svg{
-    width: 50px;
-    height: 50px;
+.piece {
+    position: relative;
+    z-index: 9;
 }
 
 .beige {
@@ -98,14 +262,13 @@ p {
     fill: rgba(232, 227, 214, 0.826);
 }
 
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 15px;
+footer{
+    background-color: (254, 252, 247);
+    text-align: center;
+    color:rgb(27, 25, 25);
+    font-weight: lighter;
 }
 
-footer img {
-    width: 15px;
+.C{
+    font-size:20px;
 }
-
