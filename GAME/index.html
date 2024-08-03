@@ -25,8 +25,8 @@
                 <nav>
                     <ul>
                         <li><a href="../ACCUEIL/Accueil.html">Accueil</a></li>
-                        <li><a href="#">parametre</a></li>
-                        <li><a href="#">Aide</a></li>
+                        <li><a href="../GAME/rules.html">parametre</a></li>
+                        <li><a href="../ACCUEIL/index.html">Aide</a></li>
                     </ul>
                 </nav>
             </div>
@@ -49,7 +49,7 @@
                 <div class="controle">
                     <button id="star" onclick="start()">start</button>
                     <button id="stop" onclick="stop()">stop</button>
-                    <button id="reset" onclick="resetGame()">reset</button>
+                    <button id="reset" onclick="reset()">reset</button>
                 </div>
             </div>
 
@@ -63,6 +63,26 @@
     </div>
 
     <script src="plateau.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const audio = document.getElementById('bip');
+            const savedVolume = localStorage.getItem('volume');
+            const savedMute = localStorage.getItem('mute') === 'true';
+        
+            if (savedVolume !== null) {
+                audio.volume = savedVolume;
+            }
+        
+            audio.muted = savedMute;
+        });
+        
+        window.addEventListener('volumeMutechanged', (event) => {
+            const { volume, mute } = event.detail;
+            const audio = document.getElementById('bip');
+            audio.volume = volume;
+            audio.muted = mute;
+        });
+        </script>
 
     <footer>
         <section>

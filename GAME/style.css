@@ -1,9 +1,10 @@
+
 body {
     margin: 0;
     padding: 0;
     width: 100%;
     font-family: "Roboto" , sans-serif;
-    background-color: rgb(240, 243, 243);
+    background-color:  rgb(254, 252, 247);
 }
 
 .container {
@@ -28,7 +29,7 @@ body {
 .sidebar {
     width: 20%;
     height: 200px;
-    background-color:rgb(240, 243, 243);;
+    background-color:rgb(254, 252, 247);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,7 +49,7 @@ body {
 #timer {
     font-size: 24px;
     font-weight: bold;
-    background-color: #6498b0;
+    background-color: #b09364;
     border: 2px solid #1f2428;
     background-color: white;
     padding: 10px;
@@ -82,7 +83,8 @@ body {
 }
 
 button{
-    background-color: #6498b0;
+    /*background-color: #6498b0;*/
+    background-color:  #1d9c5e;
     color: white;
     font-size: 15px;
     padding: 10px 20px;
@@ -111,7 +113,7 @@ button:hover{
 .gauche {
     height:30vh;
     width: 20%;
-    background-color:rgb(240, 243, 243);;
+    background-color: rgb(254, 252, 247);
     margin-top: 100px;
     padding: 20px;
     display: flex;
@@ -229,11 +231,11 @@ path {
 }
 
 .beige {
-    background-color: rgba(223, 217, 200, 0.816);
+    background-color: rgba(252, 238, 202, 0.91);
 }
 
 .brown {
-    background-color: rgb(69, 97, 129);
+    background-color: rgba(155, 193, 130, 0.775);
 }
 
 .black {
@@ -241,7 +243,7 @@ path {
 }
 
 .white {
-    fill: rgba(232, 227, 214, 0.826);
+    fill: rgb(255, 255, 255);
 }
 
 footer{

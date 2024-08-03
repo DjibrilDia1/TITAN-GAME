@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECH TITANS - Réglages</title>
+    <link rel="stylesheet" href="rule.css">
+    
+</head>
+<body>
+   
+    
+    <h1>REGLAGES </h1>
+    <h3>SON</h3>
+    <div id="param">
+        <div>
+
+            <label>Volume</label>
+            <input type="range" id="volume" min="0" max="1" step="0.01">
+        </div>
+        <br>
+        <div>
+
+            <label>Muet:</label>
+            <input type="checkbox" id="mute">
+        </div>
+        <br>
+    </div>
+    <button onclick="SauvegardeReglages()">Sauvegarder</button>
+   
+    <footer>
+        <p class="C">chessGame<span>&copy;</span> 2024 Privacy policy</p> 
+    </footer>
+    <script>
+ 
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const savedVolume = localStorage.getItem('volume');
+            const savedMute = localStorage.getItem('mute') === 'true';
+
+            if (savedVolume !== null) {
+                document.getElementById('volume').value = savedVolume;
+            }
+
+            document.getElementById('mute').checked = savedMute;
+        });
+
+        
+        function SauvegardeReglages() {
+            let volume = document.getElementById('volume').value;
+            let mute = document.getElementById('mute').checked;
+        
+            localStorage.setItem('volume', volume);
+            localStorage.setItem('mute', mute);
+            let audio=window.parent.document.querySelector('audio');
+            audio.volume=volume;
+            audio.muted=mute;
+            let event= new CustomEvent('volumeMutechanged',{
+                detail:{
+                    volume:volume,
+                    mute:mute
+                }
+            });
+        window.parent.dispatchEvent(event);
+            alert('Réglages sauvegardés!');
+        }
+    
+document.getElementById('changecouleurs').addEventListener('click',changecouleurs);
+function changecouleurs() {
+    let touscases = document.querySelectorAll('.square');
+    touscases.forEach((square) => {
+        square.classList.toggle("beige", square.classList.contains("blue"));
+        square.classList.toggle("blue", square.classList.contains("beige"));
+        square.classList.toggle("brown", square.classList.contains("green"));
+        square.classList.toggle("green", square.classList.contains("brown"));
+    });
+}
+   
+    </script>
+</body>
+</html>
+

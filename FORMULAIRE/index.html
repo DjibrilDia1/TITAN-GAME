@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECH TITANS - Connexion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="conteneur">
+        <div class="logo">
+            <i class="fas fa-user"></i>
+        </div>
+        <div class="tab-body" data-id="connexion">
+            <form id="connexion">
+                <div class="row">
+                    <i class="far fa-user"></i>
+                    <input type="email" class="input" placeholder="Adresse Mail" id="cmail">
+                </div>
+                <div class="row">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Mot de Passe" class="input" id="cpasse">
+                </div>
+                <button type="submit" class="btn">Connexion</button>
+                <div id="monmessages"></div>
+            </form>
+        </div>
+        <div class="tab-body" data-id="inscription">
+            <form id="inscription">
+                <div class="row">
+                    <i class="far fa-user"></i>
+                    <input type="email" class="input" placeholder="Adresse Mail" id="imail">
+                </div>
+                <div class="row">
+                    <i class="fas far-lock"></i>
+                    <input type="password" class="input" placeholder="Mot de Passe" id="ipasse">
+                </div>
+                <div class="row">
+                    <i class="fas far-lock"></i>
+                    <input type="password" class="input" placeholder="Confirmer Mot de Passe" id="confirme">
+                </div>
+                <button type="submit" class="btn">Inscription</button>
+                <div id="monmessage"></div>
+            </form>
+        </div>
+        <div class="tab-footer">
+            <a href="javascript:void(0)" data-ref="connexion" class="tab-link active">Connexion</a>
+            <a href="javascript:void(0)" data-ref="inscription" class="tab-link">Inscription</a>
+        </div>
+    </div>
+
+    <audio id="backgroundMusic" src="musiques.mp4" preload="auto" loop></audio>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="script.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>
+
+         
