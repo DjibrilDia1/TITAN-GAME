@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECH TITANS - Réglages</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+    
+    <h1>REGLAGES</h1>
+    <div>
+        <h3>SON</h3>
+        <label>Volume</label>
+        <input type="range" id="volume" min="0" max="1" step="0.01">
+        <br>
+        <label>Muet:</label>
+        <input type="checkbox" id="mute">
+        <br>
+        <button onclick="SauvegardeReglages()">Sauvegarder</button>
+    </div>
+    <footer>
+        <h3>TECH TITANS <img src="foootter.jpg" alt="c"> 2024</h3>
+    </footer>
+    <script>
+        window.onload = function() {
+            let volume = localStorage.getItem('volume');
+            let mute = localStorage.getItem('mute');
+            if (volume !== null) {
+                document.getElementById('volume').value = volume;
+            }
+            if (mute !== null) {
+                document.getElementById('mute').checked = mute === 'true';
+            }
+        }
+
+        function SauvegardeReglages() {
+            let volume = document.getElementById('volume').value;
+            let mute = document.getElementById('mute').checked;
+
+            localStorage.setItem('volume', volume);
+            localStorage.setItem('mute', mute);
+
+            alert('Réglages sauvegardés!');
+        }
+    </script>
+</body>
+</html>
+

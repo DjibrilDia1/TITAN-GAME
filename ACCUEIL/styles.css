@@ -56,19 +56,19 @@ nav ul a {
     transform: translate(-50%,-50%);
     text-align: center;
 }
-.test{
-    background-color: rgb(119, 81, 9);
-}
+
 .mesboutons{
     display: grid;
     gap: 20px;
 }
-button{
+a{
     background-color: burlywood;
     font-size: 1rem;
     border: 3px solid wheat;
-    border-radius: 15px;
+    border-radius: 1px;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 footer{
     display: flex;
