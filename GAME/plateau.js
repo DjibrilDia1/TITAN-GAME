@@ -1,3 +1,5 @@
+//--------------------------------------------------------------------------------------
+// 1er partie: creation du plateau d'echiquier
 // Sélectionne les éléments du DOM pour le plateau de jeu, l'affichage du joueur et l'affichage des informations
 const gameBoard = document.querySelector("#gameBoard");
 const playerDisplay = document.querySelector("#player");
@@ -65,7 +67,9 @@ function createPlateau() {
 
 // Appelle la fonction pour créer le plateau de jeu avec les pièces initiales
 createPlateau();
-/************************************************************************************** */
+
+//-----------------------------------------------------------------------------------------/
+// 2 ieme partie : mouvement des joueurs
 
 const allSquares = document.querySelectorAll(".square");
 
@@ -147,6 +151,8 @@ function dragDrop(e) {
     }
 }
 
+//----------------------------------------------------------------------------------------------------------------
+// 3 ieme partie : le mouvement des joueurs en fonction des régles du jeu
 function checkIfValid(target){
     const targetId = Number(target.getAttribute('square-id')) || Number(target.parentNode.getAttribute('square-id'));
     const startId = Number(startPositionId);

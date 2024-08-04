@@ -3,6 +3,7 @@ body{
     padding: 0;
     background-color: rgba(205, 168, 120, 0.909);
 }
+
 #param{
     height: 10vh;
     display: flex;
@@ -11,12 +12,15 @@ body{
     justify-content: space-between;
    
 }
+
 form{
     padding-bottom: 120px;
 }
+
 h1 {
     text-align: center;   
 }
+
 h3{
     text-align: center;
 }
