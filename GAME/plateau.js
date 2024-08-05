@@ -101,7 +101,7 @@ function dragOver(e) {
 
 // Fonction appelée lorsqu'un élément est lâché sur une zone.
 function dragDrop(e) {
-    e.stopPropagation(); // Empêche l'événement de se propager à d'autres éléments.
+    e.stopPropagation();
     
     // Vérifie si l'élément glissé est du bon joueur (la couleur correspond à celle du joueur actuel).
     const correctGo = draggedElement.firstChild.classList.contains(playerGo);
@@ -368,6 +368,7 @@ function checkIfValid(target){
     return false;
 }
 
+// fonction pour changer de joueur 
 function changePlayer() {
     if (playerGo === "black") {
         reverseIds();
@@ -380,17 +381,21 @@ function changePlayer() {
     }
 }
 
+// fonction changer joueur
 function reverseIds() {
     const allSquares = document.querySelectorAll(".square");
     allSquares.forEach((square, index) => 
         square.setAttribute('square-id', (width * width - 1) - index));
 }
 
+// function permuter les ID 
 function revertIds() {
     const allSquares = document.querySelectorAll(".square");
     allSquares.forEach((square, index) => 
         square.setAttribute('square-id', index));
 }
+
+// fonction verifier s'il existe un gagnant 
 function checkForWin() {
     const kings = Array.from(document.querySelectorAll('#king'));
     if (!kings.some(king => king.firstChild.classList.contains('white'))) {
@@ -434,27 +439,6 @@ function resetGame() {
     playerDisplay.textContent = 'white';
 }
 
-// Exemple de fonction pour réinitialiser le plateau
-function initializeBoard() {
-    const squares = document.querySelectorAll('.square');
-    squares.forEach(square => {
-        // Suppression des pièces existantes
-        while (square.firstChild) {
-            square.removeChild(square.firstChild);
-        }
-    });
-
-    // Remettre en place les pièces initiales (exemple pour les rois)
-    let whiteKing = document.createElement('div');
-    whiteKing.classList.add('piece', 'white', 'king');
-    squares[4].appendChild(whiteKing); // Position initiale pour le roi blanc
-
-    let blackKing = document.createElement('div');
-    blackKing.classList.add('piece', 'black', 'king');
-    squares[60].appendChild(blackKing); // Position initiale pour le roi noir
-    
-    // Ajouter d'autres pièces ici selon vos besoins
-}
 
 
 /*******************************************chronometre******************************************/
